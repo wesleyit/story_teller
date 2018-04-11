@@ -26,4 +26,10 @@ coverage: clean lint  ## Run coverage tests
 		--cov=story_teller \
 		--cov-report term \
 		--cov-report html
+
+coverage-browser: clean lint  ## Run coverage tests
+	pytest -x -v story_teller/ \
+		--cov=story_teller \
+		--cov-report term \
+		--cov-report html
 	xdg-open htmlcov/index.html
